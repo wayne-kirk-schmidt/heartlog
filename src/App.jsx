@@ -3,6 +3,8 @@ import './App.css'
 import './mytailwind.css'
 import {Link} from "react-router-dom";
 
+import heartLogLogo from '../HeartVine.Logo.png'
+
 function App() {
     const [formData, setFormData] = useState({
         firstname: '',
@@ -31,6 +33,11 @@ function App() {
             <div className="w-full max-w-md">
                 {/* Logo and Title */}
                 <div className="text-center mb-8">
+                    <div>
+                        <a href="http://www.heartlog.com" target>
+                            <img src={heartLogLogo} className="logo" alt="heartlog logo" />
+                        </a>
+                    </div>
                     <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Log</h1>
                     <div className="text-green-600">Keeping in Contact, Preserving Memories</div>
                     <div className="text-green-600">Building Conenctions</div>
@@ -140,8 +147,15 @@ function App() {
                                 Contact us
                             </Link>
                             &nbsp;
-                            for more information
+                            for more information.
 
+
+                        </p>
+                        <p className="text-sm text-gray-600">
+                            Let's check &nbsp;
+                            <Link to="/journey" className="font-medium text-green-600 hover:text-green-800">
+                                the journey
+                            </Link>
                         </p>
                     </div>
                 </div>
