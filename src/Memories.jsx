@@ -1,9 +1,9 @@
 import './App.css'
 import './mytailwind.css'
-import { Link } from "react-router-dom";
-import { useState } from 'react';
+import {Link} from "react-router-dom";
+import {useState} from 'react';
 
-function Journey() {
+function Memories() {
     const [searchData, setSearchData] = useState({
         date: '',
         keyword: '',
@@ -14,7 +14,7 @@ function Journey() {
     const [selectedDateIndex, setSelectedDateIndex] = useState(3); // Default selected date (index 3)
 
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setSearchData({
             ...searchData,
             [name]: value
@@ -35,11 +35,11 @@ function Journey() {
 
     // Sample person data for dropdown
     const people = [
-        { id: 1, name: "Select a person" },
-        { id: 2, name: "Pastor Jeff" },
-        { id: 3, name: "Wayne L Schmidt" },
-        { id: 4, name: "Wayne K Schmidt" },
-        { id: 5, name: "Jake Nguyen" }
+        {id: 1, name: "Select a person"},
+        {id: 2, name: "Pastor Jeff"},
+        {id: 3, name: "Wayne L Schmidt"},
+        {id: 4, name: "Wayne K Schmidt"},
+        {id: 5, name: "Jake Nguyen"}
     ];
 
     // Generate 10 consecutive dates starting from today
@@ -69,14 +69,14 @@ function Journey() {
                     <div className="text-green-600">Building Connections</div>
                 </div>
 
-                {/* Journey Content */}
+                {/* Memories Content */}
                 <div className="bg-white rounded-lg shadow-xl p-8">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Your Journey</h2>
-
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Your Memories</h2>
 
 
                     {/* Search Card */}
-                    <div className="bg-white border border-green-700 rounded-xl p-6 focus-within:ring-2 focus-within:ring-green-300 focus-within:ring-offset-2 mt-6 transition-colors">
+                    <div
+                        className="bg-white border border-green-700 rounded-xl p-6 focus-within:ring-2 focus-within:ring-green-300 focus-within:ring-offset-2 mt-6 transition-colors">
                         <div className="flex items-center mb-4">
                             <div className="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center mr-3">
                                 <svg className="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -156,38 +156,26 @@ function Journey() {
 
                     {/* Results Area (placeholder) */}
                     <div className="mt-8 p-4 border border-gray-200 rounded-lg bg-gray-50">
-                        <p className="text-gray-500 text-center">10 results were found</p>
+                        <p className="text-gray-500 text-center">2 results were found</p>
                     </div>
 
-                    {/* Timeline Component */}
-                    <div className="mb-8">
-                        <div className="relative py-8">
-                            {/* Horizontal Line */}
-                            <div className="absolute h-0.5 w-full bg-green-200 top-1/2 transform -translate-y-1/2"></div>
+                    {/* Result Component */}
+                    <div
+                        className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors">
 
-                            {/* Date Nodes */}
-                            <div className="flex justify-between relative">
-                                {timelineDates.map((date, index) => (
-                                    <div key={index} className="flex flex-col items-center">
-                                        {/* Circle Node */}
-                                        <div
-                                            className={`w-6 h-6 rounded-full border-2 border-green-500 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-colors z-10 
-                                            ${selectedDateIndex === index ? 'bg-green-500' : 'bg-white'}`}
-                                            onClick={() => handleDateSelect(index)}
-                                            aria-label={`Select date ${date.toLocaleDateString()}`}
-                                        >
-                                            {selectedDateIndex === index && (
-                                                <span className="sr-only">Selected</span>
-                                            )}
-                                        </div>
 
-                                        {/* Date Label */}
-                                        <div className="text-xs text-green-700 mt-2 text-center">
-                                            {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="">
+                            <h2 className="text-green-700 text-2xl text-left">Winter Memory 91</h2>
+                            <p className="text-green-500 text-sm text-wrap">Hi there my little grandchildren, this is grandpa. For this moment, I would like to share a story that happened in 1991 ...</p>
+                        </div>
+                    </div>
+                    <div
+                        className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors">
+
+
+                        <div className="">
+                            <h2 className="text-green-700 text-2xl text-left">Spring Memory 95</h2>
+                            <p className="text-green-500 text-sm text-wrap">I can still remember the smell of the blossoms in April 1995, holding you for the first time in my arms...</p>
                         </div>
                     </div>
 
@@ -203,4 +191,4 @@ function Journey() {
     );
 }
 
-export default Journey;
+export default Memories;

@@ -156,6 +156,12 @@ function App() {
                             <Link to="/journey" className="font-medium text-green-600 hover:text-green-800">
                                 the journey
                             </Link>
+                            &nbsp;
+                            or
+                            &nbsp;
+                            <Link to="/memories" className="font-medium text-green-600 hover:text-green-800">
+                                the memories
+                            </Link>
                         </p>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ function Journey() {
             <div className="w-full max-w-md">
                 {/* Logo and Title */}
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Vine</h1>
+                    <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Log</h1>
                     <div className="text-green-600">Your Personal Growth Journey</div>
                     <div className="text-green-600">Track Your Progress</div>
                 </div>
