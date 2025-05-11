@@ -5,7 +5,7 @@ import './mytailwind.css'
 import {Greet} from "../wailsjs/go/main/App";
 import {Link} from "react-router-dom";
 
-function App() {
+function Contact() {
     const [resultText, setResultText] = useState("Please enter your name below 👇");
     const [name, setName] = useState('');
     const updateName = (e) => setName(e.target.value);
@@ -38,7 +38,7 @@ function App() {
     }
 
     return (
-        <div id="App">
+        <div id="Contact">
 
 
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-200 flex flex-col items-center justify-center p-4">
@@ -52,7 +52,7 @@ function App() {
                         </div>
                         <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Log</h1>
                         <div className="text-green-600">Keeping in Contact, Preserving Memories</div>
-                        <div className="text-green-600">Building Connections</div>
+                        <div className="text-green-600">Building Connection</div>
                     </div>
 
                     {/* Signup Form */}
@@ -78,13 +78,13 @@ function App() {
                                 <ul className="py-1">
                                     <li>
                                         <Link to="/"
-                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 bg-green-100">
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
                                             Sign Up
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="/contact"
-                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700">
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 bg-green-100">
                                             Contact
                                         </Link>
                                     </li>
@@ -117,97 +117,91 @@ function App() {
                                 </ul>
                             </div>
                         </div>
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Sign Up</h2>
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Contact Us</h2>
 
-                        <form onSubmit={handleSubmit}>
-                            <div className="space-y-4">
-                                <div>
-                                    <label htmlFor="firstname" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                                    <input
-                                        type="text"
-                                        id="firstname"
-                                        name="firstname"
-                                        placeholder="John"
-                                        value={formData.firstname}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-green-900"
-                                        required
-                                    />
-                                </div>
+                        <div
+                            className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors items-center">
 
-                                <div>
-                                    <label htmlFor="lastname" className="block text-sm font-medium text-gray-700 mb-1">Last
-                                        Name</label>
-                                    <input
-                                        type="text"
-                                        id="lastname"
-                                        name="lastname"
-                                        placeholder="Doe"
-                                        value={formData.lastname}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-green-900"
-                                        required
-                                    />
-                                </div>
+                            <div className="h-14 w-14 rounded-full bg-green-50 flex items-center justify-center mr-4">
 
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email
-                                        Address</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        placeholder="john.doe@heartlog.com"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-green-900"
-                                        required
-                                    />
-                                </div>
+                                <svg className="h-9 w-9 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
 
-                                <div>
-                                    <label htmlFor="phoneno" className="block text-sm font-medium text-gray-700 mb-1">Phone
-                                        Number</label>
-                                    <input
-                                        type="text"
-                                        id="phoneno"
-                                        name="phoneno"
-                                        placeholder="0412345678"
-                                        value={formData.phoneno}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-green-900"
-                                        required
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="country"
-                                           className="block text-sm font-medium text-gray-700 mb-1">Country</label>
-                                    <select
-                                        id="country"
-                                        name="country"
-                                        value={formData.country}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-green-900"
-                                        required
-                                    >
-                                        <option value="" disabled>Select a country</option>
-                                        <option value="USA">USA</option>
-                                        <option value="Japan">Japan</option>
-                                        <option value="Singapore">Singapore</option>
-                                        <option value="Australia">Australia</option>
-                                    </select>
-                                </div>
 
                             </div>
 
-                            <button
-                                type="submit"
-                                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 mt-6 transition-colors"
-                            >
-                                Sign Up
-                            </button>
-                        </form>
+                            <div className="flex-1">
+                                <h2 className="text-green-700 text-2xl ">Email</h2>
+                                <p className="text-green-500 text-sm">info@heartlog.com</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors items-center">
+
+                            <div className="h-14 w-14 rounded-full bg-green-50 flex items-center justify-center mr-4">
+
+                                <svg
+                                    className="h-9 w-9 text-green-600"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    {/* Main globe circle */}
+                                    <circle cx="12" cy="12" r="9" strokeWidth="1.5"/>
+
+                                    {/* Horizontal lines representing latitude */}
+                                    <path d="M3 12h18" strokeWidth="0.8"/>
+                                    <path d="M4 7h16" strokeWidth="0.8"/>
+                                    <path d="M4 17h16" strokeWidth="0.8"/>
+
+                                    {/* Vertical lines representing longitude */}
+                                    <path d="M12 3v18" strokeWidth="0.8"/>
+                                    <path d="M7 4v16" strokeWidth="0.8"/>
+                                    <path d="M17 4v16" strokeWidth="0.8"/>
+
+                                    {/* Web/internet indicator elements */}
+                                    <path d="M15 8l2 2" strokeWidth="1.2"/>
+                                    <path d="M7 14l2 2" strokeWidth="1.2"/>
+
+                                    {/* Small connection points */}
+                                    <circle cx="17" cy="10" r="0.8" strokeWidth="0" fill="currentColor"/>
+                                    <circle cx="9" cy="16" r="0.8" strokeWidth="0" fill="currentColor"/>
+                                    <circle cx="12" cy="12" r="1" strokeWidth="0" fill="currentColor"/>
+                                </svg>
+
+
+                            </div>
+
+                            <div className="flex-1">
+                                <h2 className="text-green-700 text-2xl ">Website</h2>
+                                <p className="text-green-500 text-sm">www.heartlog.com</p>
+                            </div>
+                        </div>
+
+                        <div
+                            className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors items-center">
+
+                            <div className="h-14 w-14 rounded-full bg-green-50 flex items-center justify-center mr-4">
+
+                                <svg className="h-9 w-9 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                     viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+
+
+                            </div>
+
+                            <div className="flex-1">
+                                <h2 className="text-green-700 text-2xl ">Support</h2>
+                                <p className="text-green-500 text-sm">080-1234-5678</p>
+                            </div>
+                        </div>
 
                         <div className="mt-6 text-center">
                             <p className="text-sm text-gray-600">
@@ -215,10 +209,12 @@ function App() {
                                 <Link to="#" className="font-medium text-green-600 hover:text-green-800">
                                     Log In
                                 </Link>
+
                             </p>
                             <p className="text-sm text-gray-600">
 
-                                <Link to="/contact" className="font-medium text-green-600 hover:text-green-800">
+                                <Link to="/contact" className="font-medium text-green-600 hover:text-green-800
+">
                                     Contact us
                                 </Link>
                                 &nbsp;
@@ -246,4 +242,4 @@ function App() {
     )
 }
 
-export default App
+export default Contact
