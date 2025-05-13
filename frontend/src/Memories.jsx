@@ -62,13 +62,13 @@ function Memories() {
     return (
         <div id="Memories">
         <div
-            className="min-h-screen bg-gradient-to-br from-blue-50 to-green-200 flex flex-col items-center justify-center p-4">
+            className="min-h-screen bg-gradient-to-br from-lime-50 to-lime-100 flex flex-col items-center justify-center p-4">
             <div className="w-full max-w-4xl">
                 {/* Logo and Title */}
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Log</h1>
-                    <div className="text-green-600">Keeping in Contact, Preserving Memories</div>
-                    <div className="text-green-600">Building Connections</div>
+                    <h1 className="text-4xl font-bold text-green-950 mb-2">HeartLog</h1>
+                    <div className="text-green-950">builds family history</div>
+                    <div className="text-green-950">through memories</div>
                 </div>
 
                 {/* Memories Content */}
@@ -121,6 +121,24 @@ function Memories() {
                                         <Link to="/preferences"
                                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
                                             Preferences
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/pricing"
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
+                                            Pricing
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/signin"
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
+                                            Sign In
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/storyguide"
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
+                                            Story Guide
                                         </Link>
                                     </li>
 

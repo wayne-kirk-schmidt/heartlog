@@ -6,6 +6,9 @@ import Contact from './Contact'
 import Journey from './Journey'
 import Memories from './Memories'
 import Preferences from './Preferences'
+import Pricing from './Pricing'
+import Signin from './Signin'
+import StoryGuide from './StoryGuide'
 
 import {BrowserOpenURL} from "../wailsjs/runtime/runtime.js";
 
@@ -35,7 +38,9 @@ root.render(
             <Route path="/journey" element={<Journey />}/>
             <Route path="/memories" element={<Memories />}/>
             <Route path="/preferences" element={<Preferences />}/>
-
+            <Route path="/pricing" element={<Pricing />}/>
+            <Route path="/signin" element={<Signin />}/>
+            <Route path="/storyguide" element={<StoryGuide />}/>
         </Routes>
     </HashRouter>
 )

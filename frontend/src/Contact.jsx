@@ -41,7 +41,8 @@ function Contact() {
         <div id="Contact">
 
 
-            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-200 flex flex-col items-center justify-center p-4">
+            <div
+                className="min-h-screen bg-gradient-to-br from-lime-50 to-lime-100 flex flex-col items-center justify-center p-4">
                 <div className="w-full max-w-md">
                     {/* Logo and Title */}
                     <div className="text-center mb-8">
@@ -50,9 +51,9 @@ function Contact() {
                                 {/*<img src={heartLogLogo} className="logo" alt="heartlog logo" />*/}
                             </a>
                         </div>
-                        <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Log</h1>
-                        <div className="text-green-600">Keeping in Contact, Preserving Memories</div>
-                        <div className="text-green-600">Building Connection</div>
+                        <h1 className="text-4xl font-bold text-green-950 mb-2">HeartLog</h1>
+                        <div className="text-green-950">builds family history</div>
+                        <div className="text-green-950">through memories</div>
                     </div>
 
                     {/* Signup Form */}
@@ -107,6 +108,24 @@ function Contact() {
                                             Preferences
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link to="/pricing"
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
+                                            Pricing
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/signin"
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
+                                            Sign In
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/storyguide"
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 ">
+                                            Story Guides
+                                        </Link>
+                                    </li>
 
                                     <li className="border-t border-gray-200">
                                         <Link to="/"
@@ -119,6 +138,7 @@ function Contact() {
                         </div>
                         <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Contact Us</h2>
 
+                        {/*Email card*/}
                         <div
                             className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors items-center">
 
@@ -139,6 +159,7 @@ function Contact() {
                             </div>
                         </div>
 
+                        {/*Website card*/}
                         <div
                             className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors items-center">
 
@@ -183,6 +204,7 @@ function Contact() {
                             </div>
                         </div>
 
+                        {/*Support card*/}
                         <div
                             className="bg-white border border-green-700 rounded-xl p-4 flex hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-100 focus:ring-offset-2 mt-6 transition-colors items-center">
 
@@ -226,7 +248,7 @@ function Contact() {
                         </div>
                     </div>
 
-                     {/*Footer*/}
+                    {/*Footer*/}
                     <div className="mt-8 text-center text-sm text-gray-600">
                         <p>By signing up, you agree to our Terms of Service and Privacy Policy</p>
 
