@@ -32,13 +32,13 @@ function StoryGuides() {
     return (
         <div id="StoryGuides">
             <div
-                className="min-h-screen bg-gradient-to-br from-blue-50 to-green-200 flex flex-col items-center justify-center p-4">
+                className="min-h-screen bg-gradient-to-br from-lime-50 to-lime-100 flex flex-col items-center justify-center p-4">
                 <div className="w-full max-w-4xl">
                     {/* Logo and Title */}
                     <div className="text-center mb-8">
-                        <h1 className="text-4xl font-bold text-green-800 mb-2">Heart Log</h1>
-                        <div className="text-green-600">Keeping in Contact, Preserving Memories</div>
-                        <div className="text-green-600">Building Connections</div>
+                        <h1 className="text-4xl font-bold text-green-950 mb-2">HeartLog</h1>
+                        <div className="text-green-950">builds family history</div>
+                        <div className="text-green-950">through memories</div>
                     </div>
 
                     {/* Main Content */}

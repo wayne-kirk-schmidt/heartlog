@@ -1,5 +1,5 @@
 import React from 'react'
-import {createRoot} from 'react-dom/client'
+import {createRoot, hydrateRoot} from 'react-dom/client'
 import './style.css'
 import App from './App'
 import Contact from './Contact'
@@ -16,7 +16,7 @@ import { HashRouter, Routes, Route} from 'react-router-dom'
 
 const container = document.getElementById('root')
 
-const root = createRoot(container)
+
 
 // root.render(
 //     <React.StrictMode>
@@ -30,7 +30,23 @@ const root = createRoot(container)
 //     </React.StrictMode>
 // )
 
-root.render(
+// const root = createRoot(container)
+// root.render(
+//     <HashRouter basename="/">
+//         <Routes>
+//             <Route path="/" element={<App />} exact/>
+//             <Route path="/contact" element={<Contact />}/>
+//             <Route path="/journey" element={<Journey />}/>
+//             <Route path="/memories" element={<Memories />}/>
+//             <Route path="/preferences" element={<Preferences />}/>
+//             <Route path="/pricing" element={<Pricing />}/>
+//             <Route path="/signin" element={<Signin />}/>
+//             <Route path="/storyguide" element={<StoryGuide />}/>
+//         </Routes>
+//     </HashRouter>
+// )
+
+const app = (
     <HashRouter basename="/">
         <Routes>
             <Route path="/" element={<App />} exact/>
@@ -44,3 +60,10 @@ root.render(
         </Routes>
     </HashRouter>
 )
+
+// Check if the root element has children to determine if it was pre-rendered
+if (container.hasChildNodes()) {
+    hydrateRoot(container, app)
+} else {
+    createRoot(container).render(app)
+}
